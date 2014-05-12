@@ -35,7 +35,7 @@
         <h3>
 <a name="dldata-public" class="anchor" href="#dldata-public"><span class="octicon octicon-link"></span></a>DLData Public</h3>
 
-<p>In order to stimulate the development of encoding models of visual cortex we have made several large scale neural datasets publicly available <a href="http://github.com/dicarlolab/dldata">here</a>. This site is intended to describe the format of those datasets, and the conditions that encoding models must meet in order to be evaluated.</p>
+<p>In order to stimulate the development of encoding models of visual cortex we have made several large scale neural datasets publicly available via a github repository. This site is intended to describe the format of those datasets, and how to submit the predictions of encoding models.</p>
 
 <h3>
 <a name="data-format" class="anchor" href="#data-format"><span class="octicon octicon-link"></span></a>Data format</h3>
@@ -55,7 +55,8 @@
 <span class="n">meta</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">meta</span>
 <span class="k">print</span> <span class="n">meta</span><span class="p">[</span><span class="s">'category'</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>  <span class="c">#'car'</span>
 <span class="k">print</span> <span class="n">meta</span><span class="p">[</span><span class="s">'obj'</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>  <span class="c">#'ferrari'</span>
-<span class="n">neural_features</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">neural_features</span>
+<span class="n">IT_neural_features</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">IT_neural_features</span>
+<span class="n">V4_neural_features</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">V4_neural_features</span>
 </pre></div>
 
 <p>For further documentation, see the tutorials folder. There is a short readme describing the nature of each dataset. Depending on the dataset, neural data is available at a finer grain than simply a vector of responses per image.</p>
@@ -67,12 +68,12 @@
 <li> Clone and install the dldata_public repository</li>
 <li> Generate and save an array for one of the test datasets</li>
 <li> Submit a pull request</li>
-</ul><p>We require that encoding models be available publicly (on github or otherwise), and that the code used to generate features be made public within that repository. Once we verify these conditions, we will evaluate the models for their predictivity and add their features to the python objects.</p>
+</ul><p>We require that the code used to generate predictions be made publicly available (on github or otherwise) so that others may run your model on similarly structured datasets. Once we verify these conditions, we will evaluate the models for their predictivity and post the results.</p>
 
 <h3>
 <a name="publications" class="anchor" href="#publications"><span class="octicon octicon-link"></span></a>Publications</h3>
 
-<p>You are free to explore the data as you wish, but we ask that you contact us before publishing any analysis of this data.</p>
+<p>Feel free to explore the data as you wish, but we ask that you contact us before publishing any analysis of this data.</p>
 
 <h3>
 <a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
