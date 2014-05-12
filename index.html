@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>DiCarlo Lab Datasets by dicarlolab</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>DiCarlo Lab Datasets</h1>
+        <p>Public Neural Datasets for Encoding Models</p>
+
+
+        <p class="view"><a href="https://github.com/dicarlolab">View My GitHub Profile</a></p>
+
+      </header>
+      <section>
+        <h3>
+<a name="dldata-public" class="anchor" href="#dldata-public"><span class="octicon octicon-link"></span></a>DLData Public</h3>
+
+<p>In order to stimulate the development of encoding models of visual cortex we have made several large scale neural datasets publicly available. This site is intended to describe the format of those datasets, and the conditions that encoding models must meet in order to be evaluated.</p>
+
+<h3>
+<a name="data-format" class="anchor" href="#data-format"><span class="octicon octicon-link"></span></a>Data format</h3>
+
+<p>We have modeled the format of the datasets after <a href="http://jaberg.github.io/skdata/">skdata</a>, a format for standard machine learning datasets.</p>
+
+<p>Each dataset is a python object which has attached</p>
+
+<ul>
+<li> images (as an <a href="https://github.com/jaberg/skdata/blob/master/skdata/larray.py">skdata lazy array</a>)</li>
+<li> metadata about these images (as a <a href="http://web.mit.edu/yamins/www/tabular/modules/tabular.tab.html">tabular array</a>) </li>
+<li> neural data (as a <a href="http://www.numpy.org/">numpy array</a>), a vector of responses for each image</li>
+</ul><div class="highlight highlight-python"><pre><span class="kn">import</span> <span class="nn">dldatapublic.neural_datasets</span> <span class="kn">as</span> <span class="nn">nd</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">nd</span><span class="o">.</span><span class="n">PNAS2010</span><span class="p">()</span>
+<span class="n">images</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">images</span>  <span class="c">#not yet loaded in memory</span>
+<span class="n">im0</span> <span class="o">=</span> <span class="n">images</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c">#loaded in memory as a numpy array</span>
+<span class="n">meta</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">meta</span>
+<span class="k">print</span> <span class="n">meta</span><span class="p">[</span><span class="s">'category'</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>  <span class="c">#'car'</span>
+<span class="k">print</span> <span class="n">meta</span><span class="p">[</span><span class="s">'obj'</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>  <span class="c">#'ferrari'</span>
+<span class="n">neural_features</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">neural_features</span>
+</pre></div>
+
+<p>For further documentation, see the tutorials folder. There is a short readme describing the nature of each dataset. Depending on the dataset, neural data is available at a finer grain than simply a vector of responses per image.</p>
+
+<h3>
+<a name="submitting-encoding-models" class="anchor" href="#submitting-encoding-models"><span class="octicon octicon-link"></span></a>Submitting encoding models</h3>
+
+<ul>
+<li> Clone and install the dldata_public repository</li>
+<li> Generate and save an array for one of the test datasets</li>
+<li> Submit a pull request</li>
+</ul><p>We require that encoding models be available publicly (on github or otherwise), and that the code used to generate features be made public within that repository. Once we verify these conditions, we will evaluate the models for their predictivity and add their features to the python objects.</p>
+
+<h3>
+<a name="publications" class="anchor" href="#publications"><span class="octicon octicon-link"></span></a>Publications</h3>
+
+<p>You are free to explore the data as you wish, but we ask that you contact us before publishing any analysis of this data.</p>
+
+<h3>
+<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+
+<p>If you have any trouble installing or using the datasets, please contact <a href="mailto:ardila@mit.edu">ardila@mit.edu</a>.</p>
+      </section>
+      <footer>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
