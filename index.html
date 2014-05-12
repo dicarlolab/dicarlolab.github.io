@@ -1,41 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>DiCarlo Lab Datasets by dicarlolab</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/main.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="DiCarlo Lab Datasets : Public Neural Datasets for Encoding Models" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>DiCarlo Lab Datasets</title>
   </head>
+
   <body>
 
-      <header>
-        <h1>DiCarlo Lab Datasets</h1>
-        <p>Public Neural Datasets for Encoding Models</p>
-      </header>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/dicarlolab">View on GitHub</a>
 
-      <div id="banner">
-        <span id="logo"></span>
+          <h1 id="project_title">DiCarlo Lab Datasets</h1>
+          <h2 id="project_tagline">Public Neural Datasets for Encoding Models</h2>
 
-        <a href="https://github.com/dicarlolab" class="button fork"><strong>View On GitHub</strong></a>
-      </div><!-- end banner -->
+        </header>
+    </div>
 
-    <div class="wrapper">
-      <nav>
-        <ul></ul>
-      </nav>
-      <section>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
         <h3>
 <a name="dldata-public" class="anchor" href="#dldata-public"><span class="octicon octicon-link"></span></a>DLData Public</h3>
 
-<p>In order to stimulate the development of encoding models of visual cortex we have made several large scale neural datasets publicly available via a github repository. This site is intended to describe the format of those datasets, how to submit the predictions of encoding models, and results will be calculated and posted.</p>
+<p>In order to stimulate the development of encoding models of visual cortex we have made several large scale neural datasets publicly available via a github repository. This site is intended to describe the format of those datasets, how to submit the predictions of encoding models, and how results will be calculated and posted.</p>
 
 <h3>
 <a name="data-format" class="anchor" href="#data-format"><span class="octicon octicon-link"></span></a>Data format</h3>
@@ -66,15 +61,17 @@
 
 <ul>
 <li> Clone and install the dldata_public repository</li>
-<li> Generate and save an array for one of the test datasets</li>
+<li> Generate and save an array for one of the test datasets, the same shape as dataset.neural_features</li>
 <li> Submit a pull request</li>
 </ul><p>We require that the code used to generate predictions be made publicly available (on github or otherwise) so that others may run your model on similarly structured datasets. Once we verify these conditions, we will evaluate the models for their predictivity and post the results.</p>
 
 <h3>
-<a name="results" class="anchor" href="#results"><span class="octicon octicon-link"></span></a>Results</h3>
+<a name="resultsmethodology" class="anchor" href="#resultsmethodology"><span class="octicon octicon-link"></span></a>Results/Methodology</h3>
 
-<p>The results of predicting neural activity for all datasets in this repository are available <a href="broken%20link">here</a>. As an example, here are the results from the dataset used in our <a href="http://www.pnas.org/content/early/2014/05/08/1403112111">PNAS 2014 paper</a>
+<p>Your predictions will be evaluated using a single-site % variance explained metric, as well as a population level representation dissimilarity metric. As an example, here are the results from the dataset used in our <a href="http://www.pnas.org/content/early/2014/05/08/1403112111">PNAS 2014 paper</a>, where the methodology of these metrics is described.
 (Single site neural fit plot for V4 and IT neural data)</p>
+
+<p>The results of predicting neural activity for all datasets in this repository are available <a href="broken%20link">here</a>.</p>
 
 <h3>
 <a name="publications" class="anchor" href="#publications"><span class="octicon octicon-link"></span></a>Publications</h3>
@@ -86,11 +83,16 @@
 
 <p>If you have any trouble installing or using the datasets, please contact <a href="mailto:ardila@mit.edu">ardila@mit.edu</a>.</p>
       </section>
-      <footer>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+
     
+
   </body>
 </html>
